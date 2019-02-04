@@ -1,7 +1,7 @@
 from __future__ import print_function, division
 import unittest
 import numpy as np
-from membrane_thickness import *
+from ..membrane_thickness import *
 from scipy.spatial import Delaunay
 
 
