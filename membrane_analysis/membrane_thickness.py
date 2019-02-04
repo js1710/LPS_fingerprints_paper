@@ -1,7 +1,7 @@
 from __future__ import print_function
 import numpy as np
 import MDAnalysis as mda
-import .get_leaflets
+from . import get_leaflets
 from scipy import spatial
 import argparse
 
