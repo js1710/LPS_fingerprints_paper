@@ -12,7 +12,7 @@ A description of the options availbe can be found using the following
 ```
 python enrichment_map.py -h
 ```
-This script's input is the output of either the `gmx density` command or the density script written by M.Castillo et.al (http://perso.ibcp.fr/luca.monticelli/tools/index.html).
+This script's input is the output of either the `gmx densmap` command or the density script written by M.Castillo et.al (http://perso.ibcp.fr/luca.monticelli/tools/index.html).
 
 ## Enrichment Index
 A description of the options available can be found using the following
@@ -26,7 +26,7 @@ gmx select -s production.tpr -f production_whole.xtc -select "res_cog of resname
 ```
 Note that subsequent steps use all of the data outputted at this step.
 
-2. An enrichment .inp file is required, an example of whihc is shown below
+2. An enrichment .inp file is required, an example of which is shown below
 ```
 resname POPE POPG CDL2
 POPE  shell_11_POPE.xvg  "resname POPE"  blue
@@ -35,4 +35,4 @@ CDL2  shell_11_CDL2.xvg  "resname CDL2"  red
 ```
 The first line contains the [MDanalysis style](https://www.mdanalysis.org/) selection of the membrane. The other lines have the format, `[lipid label] [gmx_select_ouput]  [selection for lipid] [colour of output bar in plot]`.Note that the `[lipid label]` is an arbitary name for the lipid that will be ouputted to the final plot.
 
-3. Now we have all the files required to run this script. This script also outputs the Enrichment index as a function of time or each lipid if the user wishes to do analysis further to what is availble here.
+3. Now we have all the files required to run this script. This script also outputs the enrichment index as a function of time or each lipid if the user wishes to do analysis further to what is availble here.
