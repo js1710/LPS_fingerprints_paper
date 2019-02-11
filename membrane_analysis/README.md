@@ -1,6 +1,6 @@
-#Membrane analysis scripts
+# Membrane analysis scripts
 Contains scripts to calculate the membrane thickness, Depletion-Enrichment index and the Depletion-Enrichment 2D map.
-##Membrane thickess
+## Membrane thickess
 A decritpion of the options availbe can be found using the follwing
 '''
 python membrane_thickness.py -h
