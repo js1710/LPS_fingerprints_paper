@@ -25,6 +25,7 @@ The input for this script is quite complex:
 gmx select -s production.tpr -f production_whole.xtc -select "res_cog of resname POPE and within 0.7 of name BB SC1 SC2 SC3 SC4" -tu us -e 30 -os shell_7_POPE -pbc yes
 ```
 Note that subsequent steps use all of the data outputted at this step.
+
 2. An enrichment .inp file is required, an example of whihc is shown below
 ```
 resname POPE POPG CDL2
