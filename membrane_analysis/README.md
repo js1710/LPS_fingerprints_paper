@@ -1,14 +1,14 @@
 # Membrane analysis scripts
 Contains scripts to calculate the membrane thickness, Depletion-Enrichment index and the Depletion-Enrichment 2D map.
 ## Membrane thickess
-A description of the options availbe can be found using the following
+A description of the options available can be found using the following
 ```
 python membrane_thickness.py -h
 ```
 If a protein is present in the system the trajectory should be preprocessed to center the trajectory on the protein. This script will not work correctly if the trajectory has been rotationally fitted in any manner.
 
 ## Enrichment Map
-A description of the options availbe can be found using the following
+A description of the options available can be found using the following
 ```
 python enrichment_map.py -h
 ```
@@ -36,3 +36,12 @@ CDL2  shell_11_CDL2.xvg  "resname CDL2"  red
 The first line contains the [MDanalysis style](https://www.mdanalysis.org/) selection of the membrane. The other lines have the format, `[lipid label] [gmx_select_ouput]  [selection for lipid] [colour of output bar in plot]`.Note that the `[lipid label]` is an arbitary name for the lipid that will be ouputted to the final plot.
 
 3. Now we have all the files required to run this script. This script also outputs the enrichment index as a function of time or each lipid if the user wishes to do analysis further to what is availble here.
+
+## Lipid survivability probability
+A description of the options available can be found using the following
+```
+python lipid_lifetime.py -h
+```
+This script calculates two properties:
+1. The average time contiguously spent at the surface of a protein by lipids of a given type.
+2. The Probability of finding a lipid bound at t and t+dt (based on the implementation [here](https://github.com/GrossfieldLab/loos) 
