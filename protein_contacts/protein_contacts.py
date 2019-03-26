@@ -11,7 +11,7 @@ def get_hist(structure, trajectory, start=0, stop=-1, step=1, contact_sel="name 
     contact_group = u.select_atoms(contact_sel)
     resname_hist = {}
     for frame in u.trajectory[start:stop:step]:
-        tree = AtomNeighborSearch(protein, box=u.dimensions[:3])
+        tree = AtomNeighborSearch(protein, box=u.dimensions)
         for atom in contact_group:
             near = tree.search(atom, 6., level='R')
             if len(near) == 0:
